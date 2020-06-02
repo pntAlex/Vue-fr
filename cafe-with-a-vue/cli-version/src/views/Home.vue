@@ -39,7 +39,14 @@ export default {
 	name: "Home",
 	components: {
 		MenuItem
-	},
+  },
+  beforeMount() {
+    if(! (new Date().getDate() % 2)){
+      this.simpleMenu.forEach(item => {
+        item.price /= 1.1
+      });
+    }
+  },
 	data() {
 		return {
 			restaurantName: "La belle vue",

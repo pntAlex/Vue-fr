@@ -1,7 +1,10 @@
 <script>
 export default {
 	name: "MenuItem",
-	props: ["addToShoppingCart", "image", "inStock", "name", "price", "quantity"]
+	props: ["addToShoppingCart", "image", "inStock", "name", "price", "quantity"],
+	// beforeMount() {
+	// 	this.price /= new Date().getDate() % 2 ? 1 : 1.1
+	// },
 }
 </script>
 
